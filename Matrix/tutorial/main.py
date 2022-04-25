@@ -1,7 +1,19 @@
 from matrix import Matrix
 
-matrix1 = Matrix([[1, 2], [3, 4]])
-matrix2 = Matrix([[1, 2], [3, 4]])
-# matrix2 = Matrix([[1, 2, 3], [4, 5, 6], [2, 1, 4], [2, 2, 1]])
-matrix3 = matrix1.add(matrix2).add(matrix1).add(matrix1)
-print(matrix3.data)
+if __name__ == '__main__':
+    # Test examples
+    matrix1 = Matrix([[3, 12, 4], [5, 6, 8], [1, 0, 2]])
+    matrix2 = Matrix([[7, 3, 8], [11, 9, 5], [6, 8, 4]])
+
+    # matrix1.print()
+    # matrix2.print()
+
+    print("matrix1 + matrix2 =")
+    matrix1.add(matrix2).print()
+    # you can use method chaining addition e.g: matrix1.add(matrix2).add(matrix2).add(<etc>).print()
+
+    print("matrix1 - matrix2 =")
+    matrix1.subtract(matrix2).print()
+
+    print("matrix1 X matrix2 =")
+    matrix1.mult(matrix2).print()
