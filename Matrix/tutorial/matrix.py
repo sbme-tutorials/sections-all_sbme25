@@ -19,11 +19,20 @@ class Matrix:
         self.rows_count = len(two_dim_arr)
         self.columns_count = len(two_dim_arr[0])
 
-    def print(self):
+    def __str__(self):
+        result = ""
         for row in range(self.rows_count):
             for col in range(self.columns_count):
-                print(self.matrix[row][col], end=' ')
-            print('\n')
+                result += str(self.matrix[row][col]) + " "
+            result += "\n"
+        return result
+
+    def print(self):
+        # The point of having this way is for being able to method chain
+        # on any matrix object for example:
+        # matrix1.add(matrix2).print().add(matrix3) ...
+        # this is possible by returning self
+        print(self)
         return self
 
     def add(self, other_matrix):
