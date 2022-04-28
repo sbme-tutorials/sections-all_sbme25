@@ -9,12 +9,19 @@ if __name__ == '__main__':
     # matrix1.print()
     # print(matrix1)
 
-    print("matrix1 + matrix2 =")
-    matrix1.add(matrix2).print()
-    # you can use method chaining addition e.g: matrix1.add(matrix2).add(matrix2).add(<etc>).print()
+    # print("matrix1 + matrix2 =")
+    # matrix1.add(matrix2).print()
+    # # you can use method chaining addition e.g: matrix1.add(matrix2).add(matrix2).add(<etc>).print()
+    #
+    # print("matrix1 - matrix2 =")
+    # matrix1.subtract(matrix2).print()
+    #
+    # print("matrix1 X matrix2 =")
+    # matrix1.mult(matrix2).print()
 
-    print("matrix1 - matrix2 =")
-    matrix1.subtract(matrix2).print()
+    matrix3 = Matrix([[2, 4], [-4, -10]])
+    matrix3.get_inverse()
 
-    print("matrix1 X matrix2 =")
-    matrix1.mult(matrix2).print()
+    matrix4 = Matrix([[1, 2, -1], [-2, 0, 1], [1, -1, 0]])
+    matrix4.get_inverse().print()
+
