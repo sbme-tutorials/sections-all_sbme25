@@ -15,7 +15,7 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
     application = ApplicationWindow()
     application.show()
-    app.exec_()
+    app.exec()
 
 
 if __name__ == "__main__":
