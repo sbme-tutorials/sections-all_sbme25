@@ -1,20 +1,18 @@
 package sbme;
 
-public class Professor {
+public class Professor extends Human {
 	
-	String name;
-	int age;
-	Professor(){
+	public Professor(){
 		System.out.println("empty constructor");
 	}
-	Professor(String name){
+	public Professor(String name){
 		this.name = name;
 	}
-	Professor(int age){
+	public Professor(int age){
 		this.age = age;
 	}
 	// Constructor
-	Professor(String name, int age){
+	public Professor(String name, int age){
 		this.name = name;
 		this.age = age;
 		System.out.println("parametrized constructor");
