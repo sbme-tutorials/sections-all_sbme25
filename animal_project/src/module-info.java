@@ -1,0 +1,2 @@
+module animal_project {
+}
