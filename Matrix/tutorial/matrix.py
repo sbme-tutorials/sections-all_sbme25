@@ -51,3 +51,15 @@ class Matrix:
                 for i in range(self.rows_count):
                     dummy.matrix[row][col] += self.matrix[row][i] * other_mat.matrix[i][col]
         return dummy
+    
+      def mat_pow(self, n):
+        if n <= 0:
+            return None
+        if n == 1:
+            return self
+        if n == 2:
+            return self.mult(self, self)
+        t1 = self.mat_pow(self, n / 2)
+        if n % 2 == 0:
+            return self.mult(t1, t1)
+        return self.mult(t1, self.mult(self, t1))
